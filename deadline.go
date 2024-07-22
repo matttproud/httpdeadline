@@ -33,6 +33,16 @@
 // to perform somewhat malicious things using incorrect context deadlines (e.g.,
 // exhaust underlying backend systems by allowing them to continue for too
 // long).
+//
+// # Design Philosophy
+//
+// Allowing the client to specify the deadline (as a literal point in time) is
+// the only rational choice.  If a client specifies a duration like five
+// seconds, the question becomes: five seconds from when?  That could be
+// interpreted from when the request was issued or from when the request started
+// processing.
+//
+// Using a literal time value is the only unambiguous and deterministic choice.
 package httpdeadline
 
 import (
