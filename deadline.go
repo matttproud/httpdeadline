@@ -1,5 +1,5 @@
-// Package httpdeadline adds request deadline support to inbound HTTP requests
-// using a microscopic http.Handler chaining middleware.
+// Package httpdeadline adds request deadline support to inbound HTTP request
+// contexts using a microscopic http.Handler chaining middleware.
 //
 // This package is discussed further at
 // https://matttproud.com/blog/posts/context-cancellation-and-server-libraries.html.
